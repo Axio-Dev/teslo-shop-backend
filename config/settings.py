@@ -54,7 +54,8 @@ THIRD_PARTY_APPS = [
 ]
 
 LOCAL_APPS = [
-    "products"
+    "products",
+    "users",
 ]
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
@@ -155,3 +156,7 @@ SIMPLE_JWT = {
     "ACCESS_TOKEN_LIFETIME": timedelta(minutes=30),
     "REFRESH_TOKEN_LIFTIME": timedelta(days=7)
 }
+
+# Auth user
+
+AUTH_USER_MODEL = "users.User"
