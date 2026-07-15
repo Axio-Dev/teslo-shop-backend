@@ -16,6 +16,10 @@ from pathlib import Path
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+# Media path
+MEDIA_URL = "/media/"
+MEDIA_ROOT = BASE_DIR / "media"
+
 env = environ.Env()
 environ.Env.read_env(BASE_DIR / ".env")
 
@@ -41,6 +45,7 @@ DJANGO_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.postgres',
+    'django_extensions'
 ]
 
 THIRD_PARTY_APPS = [
