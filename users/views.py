@@ -1,4 +1,4 @@
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
@@ -51,6 +51,16 @@ class LoginAPIView(APIView):
                 **tokens,
             },
             status=status.HTTP_200_OK,
+        )
+
+
+class LogoutAPIView(APIView):
+    permission_classes = [IsAuthenticated]
+
+    def post(self, request):
+        logout(request)
+        return Response(
+            {"message": "user logout successfully"}, status=status.HTTP_200_OK
         )
 
 
