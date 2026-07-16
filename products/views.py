@@ -3,7 +3,8 @@ from rest_framework.permissions import IsAuthenticated, SAFE_METHODS
 
 from .models import Product, ProductImage
 from .serializers import ProductSerializer, ProductImageSerializer
-from users.permissions import IsStoreUser, IsAdminUser, IsSuperUser
+from users.permissions import IsStoreUser, IsAdminUser
+
 
 class ProductViewSet(ModelViewSet):
     queryset = Product.objects.all()
@@ -14,9 +15,10 @@ class ProductViewSet(ModelViewSet):
         if self.request.method in SAFE_METHODS:
             return [IsAuthenticated(), IsStoreUser()]
         return [IsAuthenticated(), IsAdminUser()]
-    
+
     def perform_create(self, serializer):
         serializer.save(created_by=self.request.user)
+
 
 class ProductImageViewSet(ModelViewSet):
     queryset = ProductImage.objects.all()

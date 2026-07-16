@@ -5,7 +5,8 @@ from rest_framework import status
 from rest_framework_simplejwt.tokens import RefreshToken
 from rest_framework.permissions import IsAuthenticated
 
-from .serializers import RegisterSerializer 
+from .serializers import RegisterSerializer
+
 
 def get_tokens_for_user(user):
     refresh = RefreshToken.for_user(user)
@@ -18,60 +19,28 @@ def get_tokens_for_user(user):
     access["role"] = user.role
     access["email"] = user.email
 
-    return {
-        "refresh": str(refresh),
-        "access": str(access)
-    }
+    return {"refresh": str(refresh), "access": str(access)}
 
 
 class LoginAPIView(APIView):
-
     def post(self, request):
 
         email = request.data.get("email")
         password = request.data.get("password")
 
-        user = authenticate(
-            email=email,
-            password=password
-        )
+        user = authenticate(email=email, password=password)
 
         if user is None:
             return Response(
-                {
-                    "error": "Invalid credentials"
-                },
-                status=status.HTTP_401_UNAUTHORIZED
+                {"error": "Invalid credentials"}, status=status.HTTP_401_UNAUTHORIZED
             )
-        
+
         tokens = get_tokens_for_user(user)
 
         login(request, user)
 
-        return Response({
-            "user": {
-                "id": str(user.id),
-                "email": user.email,
-                "first_name": user.first_name,
-                "last_name": user.last_name,
-                "role": user.role,
-            },
-            **tokens
-        }, status=status.HTTP_200_OK)
-
-class RegisterAPIView(APIView):
-
-    def post(self, request):
-
-        serializer = RegisterSerializer(data=request.data)
-
-        if serializer.is_valid():
-
-            user = serializer.save()
-
-            tokens = get_tokens_for_user(user)
-
-            return Response({
+        return Response(
+            {
                 "user": {
                     "id": str(user.id),
                     "email": user.email,
@@ -79,21 +48,47 @@ class RegisterAPIView(APIView):
                     "last_name": user.last_name,
                     "role": user.role,
                 },
-                **tokens
-            }, status=status.HTTP_201_CREATED)
-        
-        return Response(
-            serializer.errors,
-            status=status.HTTP_400_BAD_REQUEST
+                **tokens,
+            },
+            status=status.HTTP_200_OK,
         )
 
-class CheckUserStatusAPIView(APIView):
 
+class RegisterAPIView(APIView):
+    def post(self, request):
+
+        serializer = RegisterSerializer(data=request.data)
+
+        if serializer.is_valid():
+            user = serializer.save()
+
+            tokens = get_tokens_for_user(user)
+
+            return Response(
+                {
+                    "user": {
+                        "id": str(user.id),
+                        "email": user.email,
+                        "first_name": user.first_name,
+                        "last_name": user.last_name,
+                        "role": user.role,
+                    },
+                    **tokens,
+                },
+                status=status.HTTP_201_CREATED,
+            )
+
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
+class CheckUserStatusAPIView(APIView):
     permission_classes = [IsAuthenticated]
 
     def get(self, request):
 
-        return Response({
-            "is_active": request.user.is_active,
-            "role": request.user.role,
-        })
+        return Response(
+            {
+                "is_active": request.user.is_active,
+                "role": request.user.role,
+            }
+        )

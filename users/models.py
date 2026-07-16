@@ -5,6 +5,7 @@ from django.db import models
 
 from .managers import UserManager
 
+
 # Create your models here.
 class User(AbstractUser):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
@@ -19,12 +20,8 @@ class User(AbstractUser):
         USER = "user", "User"
         ADMIN = "admin", "Admin"
         SUPERUSER = "superuser", "Superuser"
-    
-    role = models.CharField(
-        max_length=20,
-        choices=Role.choices,
-        default=Role.USER
-    )
+
+    role = models.CharField(max_length=20, choices=Role.choices, default=Role.USER)
 
     USERNAME_FIELD = "email"
     REQUIRED_FIELDS = []

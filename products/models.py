@@ -7,9 +7,9 @@ from django.db import models
 
 User = get_user_model()
 
+
 # Create your models here.
 class Product(models.Model):
-
     class Gender(models.TextChoices):
         MEN = "men", "Men"
         WOMEN = "women", "Women"
@@ -29,15 +29,19 @@ class Product(models.Model):
     title = models.CharField(max_length=255)
     description = models.TextField(blank=True)
     slug = models.SlugField(unique=True, db_index=True)
-    
+
     price = models.DecimalField(max_digits=10, decimal_places=2)
     stock = models.PositiveIntegerField(default=0)
     gender = models.CharField(max_length=20, choices=Gender.choices)
-    sizes = ArrayField(models.CharField(max_length=5, choices=Sizes.choices), default=list, blank=True)
+    sizes = ArrayField(
+        models.CharField(max_length=5, choices=Sizes.choices), default=list, blank=True
+    )
     tags = ArrayField(models.CharField(max_length=50), default=list, blank=True)
-    
-    created_by = models.ForeignKey(User, on_delete=models.CASCADE, related_name="products")
-    
+
+    created_by = models.ForeignKey(
+        User, on_delete=models.CASCADE, related_name="products"
+    )
+
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
@@ -48,8 +52,11 @@ class Product(models.Model):
         self.slug = slugify(self.title)
         super().save(*args, **kwargs)
 
+
 class ProductImage(models.Model):
-    product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name="images")
+    product = models.ForeignKey(
+        Product, on_delete=models.CASCADE, related_name="images"
+    )
 
     image = models.ImageField(upload_to="products/")
 

@@ -3,12 +3,12 @@ from rest_framework import serializers
 
 User = get_user_model()
 
-class RegisterSerializer(serializers.ModelSerializer):
 
+class RegisterSerializer(serializers.ModelSerializer):
     password = serializers.CharField(write_only=True)
     username = serializers.CharField(required=False, allow_blank=True)
 
-    class Meta: 
+    class Meta:
         model = User
         fields = [
             "email",
@@ -22,7 +22,7 @@ class RegisterSerializer(serializers.ModelSerializer):
         username = validated_data.pop("username", None)
         if username in (None, ""):
             username = None
-        
+
         password = validated_data.pop("password")
         email = validated_data.pop("email")
 

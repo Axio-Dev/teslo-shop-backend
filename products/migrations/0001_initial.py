@@ -8,7 +8,6 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     initial = True
 
     dependencies = [
@@ -17,28 +16,93 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
-            name='Product',
+            name="Product",
             fields=[
-                ('id', models.UUIDField(default=uuid.uuid4, editable=False, primary_key=True, serialize=False)),
-                ('title', models.CharField(max_length=255)),
-                ('description', models.TextField(blank=True)),
-                ('slug', models.SlugField(unique=True)),
-                ('price', models.DecimalField(decimal_places=2, max_digits=10)),
-                ('stock', models.PositiveIntegerField(default=0)),
-                ('gender', models.CharField(choices=[('men', 'Men'), ('women', 'Women'), ('kid', 'Kid'), ('unisex', 'Unisex')], max_length=20)),
-                ('sizes', django.contrib.postgres.fields.ArrayField(base_field=models.CharField(choices=[('xs', 'XS'), ('s', 'S'), ('m', 'M'), ('l', 'L'), ('xl', 'XL'), ('xxl', 'XXL')], max_length=5), blank=True, default=list)),
-                ('tags', django.contrib.postgres.fields.ArrayField(base_field=models.CharField(max_length=50), blank=True, default=list)),
-                ('created_at', models.DateTimeField(auto_now_add=True)),
-                ('updated_at', models.DateTimeField(auto_now=True)),
-                ('user', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='products', to=settings.AUTH_USER_MODEL)),
+                (
+                    "id",
+                    models.UUIDField(
+                        default=uuid.uuid4,
+                        editable=False,
+                        primary_key=True,
+                        serialize=False,
+                    ),
+                ),
+                ("title", models.CharField(max_length=255)),
+                ("description", models.TextField(blank=True)),
+                ("slug", models.SlugField(unique=True)),
+                ("price", models.DecimalField(decimal_places=2, max_digits=10)),
+                ("stock", models.PositiveIntegerField(default=0)),
+                (
+                    "gender",
+                    models.CharField(
+                        choices=[
+                            ("men", "Men"),
+                            ("women", "Women"),
+                            ("kid", "Kid"),
+                            ("unisex", "Unisex"),
+                        ],
+                        max_length=20,
+                    ),
+                ),
+                (
+                    "sizes",
+                    django.contrib.postgres.fields.ArrayField(
+                        base_field=models.CharField(
+                            choices=[
+                                ("xs", "XS"),
+                                ("s", "S"),
+                                ("m", "M"),
+                                ("l", "L"),
+                                ("xl", "XL"),
+                                ("xxl", "XXL"),
+                            ],
+                            max_length=5,
+                        ),
+                        blank=True,
+                        default=list,
+                    ),
+                ),
+                (
+                    "tags",
+                    django.contrib.postgres.fields.ArrayField(
+                        base_field=models.CharField(max_length=50),
+                        blank=True,
+                        default=list,
+                    ),
+                ),
+                ("created_at", models.DateTimeField(auto_now_add=True)),
+                ("updated_at", models.DateTimeField(auto_now=True)),
+                (
+                    "user",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        related_name="products",
+                        to=settings.AUTH_USER_MODEL,
+                    ),
+                ),
             ],
         ),
         migrations.CreateModel(
-            name='ProductImage',
+            name="ProductImage",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('image', models.ImageField(upload_to='products/')),
-                ('product', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='images', to='products.product')),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("image", models.ImageField(upload_to="products/")),
+                (
+                    "product",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        related_name="images",
+                        to="products.product",
+                    ),
+                ),
             ],
         ),
     ]
