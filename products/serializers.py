@@ -1,6 +1,7 @@
 from rest_framework import serializers
 
 from products.models import Product, ProductImage
+from users.serializers import UserSerializer
 
 
 class ProductImageSerializer(serializers.ModelSerializer):
@@ -11,6 +12,7 @@ class ProductImageSerializer(serializers.ModelSerializer):
 
 class ProductSerializer(serializers.ModelSerializer):
     images = ProductImageSerializer(many=True, read_only=True)
+    created_by = UserSerializer(read_only=True)
 
     class Meta:
         model = Product
@@ -32,5 +34,4 @@ class ProductSerializer(serializers.ModelSerializer):
             "slug",
             "created_at",
             "updated_at",
-            "created_by",
         )

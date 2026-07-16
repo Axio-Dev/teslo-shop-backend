@@ -1,5 +1,9 @@
 from rest_framework.viewsets import ModelViewSet
-from rest_framework.permissions import IsAuthenticated, SAFE_METHODS
+from rest_framework.permissions import (
+    IsAuthenticated,
+    SAFE_METHODS,
+    IsAuthenticatedOrReadOnly,
+)
 
 from .models import Product, ProductImage
 from .serializers import ProductSerializer, ProductImageSerializer
@@ -13,7 +17,7 @@ class ProductViewSet(ModelViewSet):
 
     def get_permissions(self):
         if self.request.method in SAFE_METHODS:
-            return [IsAuthenticated(), IsStoreUser()]
+            return [IsAuthenticatedOrReadOnly()]
         return [IsAuthenticated(), IsAdminUser()]
 
     def perform_create(self, serializer):
@@ -26,5 +30,5 @@ class ProductImageViewSet(ModelViewSet):
 
     def get_permissions(self):
         if self.request.method in SAFE_METHODS:
-            return [IsAuthenticated(), IsStoreUser()]
+            return [IsAuthenticated(), IsStoreUser(), IsAuthenticatedOrReadOnly]
         return [IsAuthenticated(), IsAdminUser()]
