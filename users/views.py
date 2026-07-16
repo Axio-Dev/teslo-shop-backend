@@ -6,6 +6,22 @@ from rest_framework_simplejwt.tokens import RefreshToken
 
 from .serializers import RegisterSerializer 
 
+def get_tokens_for_user(user):
+    refresh = RefreshToken.for_user(user)
+
+    refresh["role"] = user.role
+    refresh["email"] = user.email
+    refresh["name"] = f"{user.first_name} {user.last_name}".strip()
+
+    access = refresh.access_token
+    access["role"] = user.role
+    access["email"] = user.email
+
+    return {
+        "refresh": str(refresh),
+        "access": str(access)
+    }
+
 
 class LoginAPIView(APIView):
 
@@ -27,12 +43,18 @@ class LoginAPIView(APIView):
                 status=status.HTTP_401_UNAUTHORIZED
             )
         
-        refresh = RefreshToken.for_user(user)
+        tokens = get_tokens_for_user(user)
 
         return Response({
-            "access": str(refresh.access_token),
-            "refresh": str(refresh)
-        })
+            "user": {
+                "id": str(user.id),
+                "email": user.email,
+                "first_name": user.first_name,
+                "last_name": user.last_name,
+                "role": user.role,
+            },
+            **tokens
+        }, status=status.HTTP_201_CREATED)
 
 class RegisterAPIView(APIView):
 
