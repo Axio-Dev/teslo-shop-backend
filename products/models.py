@@ -36,7 +36,7 @@ class Product(models.Model):
     sizes = ArrayField(models.CharField(max_length=5, choices=Sizes.choices), default=list, blank=True)
     tags = ArrayField(models.CharField(max_length=50), default=list, blank=True)
     
-    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="products")
+    created_by = models.ForeignKey(User, on_delete=models.CASCADE, related_name="products")
     
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)

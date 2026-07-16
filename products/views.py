@@ -14,6 +14,9 @@ class ProductViewSet(ModelViewSet):
         if self.request.method in SAFE_METHODS:
             return [IsAuthenticated(), IsStoreUser()]
         return [IsAuthenticated(), IsAdminUser()]
+    
+    def perform_create(self, serializer):
+        serializer.save(user=self.request.user)
 
 class ProductImageViewSet(ModelViewSet):
     queryset = ProductImage.objects.all()

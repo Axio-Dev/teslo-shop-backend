@@ -25,12 +25,13 @@ class ProductSerializer(serializers.ModelSerializer):
             "gender",
             "sizes",
             "tags",
-            "user",
             "created_at",
             "updated_at",
+            "created_by",
         )
         read_only_fields = (
             "slug",
             "created_at",
             "updated_at",
+            "created_by",
         )            
