@@ -54,7 +54,7 @@ class LoginAPIView(APIView):
                 "role": user.role,
             },
             **tokens
-        }, status=status.HTTP_201_CREATED)
+        }, status=status.HTTP_200_OK)
 
 class RegisterAPIView(APIView):
 
@@ -66,14 +66,18 @@ class RegisterAPIView(APIView):
 
             user = serializer.save()
 
-            refresh = RefreshToken.for_user(user)
+            tokens = get_tokens_for_user(user)
 
             return Response({
-                "user": serializer.data,
-                "access": str(refresh.access_token),
-                "refresh": str(refresh)
-            }, status=status.HTTP_201_CREATED
-            )
+                "user": {
+                    "id": str(user.id),
+                    "email": user.email,
+                    "first_name": user.first_name,
+                    "last_name": user.last_name,
+                    "role": user.role,
+                },
+                **tokens
+            }, status=status.HTTP_201_CREATED)
         
         return Response(
             serializer.errors,

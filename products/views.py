@@ -1,17 +1,25 @@
 from rest_framework.viewsets import ModelViewSet
-from rest_framework.permissions import IsAuthenticated
+from rest_framework.permissions import IsAuthenticated, SAFE_METHODS
 
 from .models import Product, ProductImage
 from .serializers import ProductSerializer, ProductImageSerializer
 from users.permissions import IsStoreUser, IsAdminUser, IsSuperUser
 
 class ProductViewSet(ModelViewSet):
-    permission_classes = [IsStoreUser, IsAdminUser, IsSuperUser]
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
     lookup_field = "slug"
 
+    def get_permissions(self):
+        if self.request.method in SAFE_METHODS:
+            return [IsAuthenticated(), IsStoreUser()]
+        return [IsAuthenticated(), IsAdminUser()]
+
 class ProductImageViewSet(ModelViewSet):
-    permission_classes = [IsAdminUser, IsSuperUser]
     queryset = ProductImage.objects.all()
     serializer_class = ProductImageSerializer
+
+    def get_permissions(self):
+        if self.request.method in SAFE_METHODS:
+            return [IsAuthenticated(), IsStoreUser()]
+        return [IsAuthenticated(), IsAdminUser()]
