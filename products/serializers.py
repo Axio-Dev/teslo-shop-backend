@@ -5,9 +5,17 @@ from users.serializers import UserSerializer
 
 
 class ProductImageSerializer(serializers.ModelSerializer):
+    image = serializers.SerializerMethodField()
+
     class Meta:
         model = ProductImage
-        fields = "__all__"
+        fields = (
+            "id",
+            "image",
+        )
+
+    def get_image(self, obj):
+        return obj.image.name.split("/")[-1]
 
 
 class ProductSerializer(serializers.ModelSerializer):

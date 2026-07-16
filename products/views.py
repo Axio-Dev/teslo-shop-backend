@@ -7,7 +7,7 @@ from rest_framework.permissions import (
 
 from .models import Product, ProductImage
 from .serializers import ProductSerializer, ProductImageSerializer
-from users.permissions import IsStoreUser, IsAdminUser
+from users.permissions import IsAdminUser
 
 
 class ProductViewSet(ModelViewSet):
@@ -30,5 +30,5 @@ class ProductImageViewSet(ModelViewSet):
 
     def get_permissions(self):
         if self.request.method in SAFE_METHODS:
-            return [IsAuthenticated(), IsStoreUser(), IsAuthenticatedOrReadOnly]
+            return [IsAuthenticatedOrReadOnly()]
         return [IsAuthenticated(), IsAdminUser()]
