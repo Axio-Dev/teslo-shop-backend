@@ -1,0 +1,1162 @@
+{
+  "users": [
+    {
+      "email": "test1@google.com",
+      "fullName": "Test One",
+      "password": "Abc123",
+      "roles": [
+        "admin"
+      ]
+    },
+    {
+      "email": "test2@google.com",
+      "fullName": "Test Two",
+      "password": "Abc123",
+      "roles": [
+        "user"
+      ]
+    }
+  ],
+  "products": [
+    {
+      "title": "Men’s Chill Crew Neck Sweatshirt",
+      "description": "Producto de ejemplo",
+      "slug": "mens-chill-crew-neck-sweatshirt",
+      "price": 75,
+      "stock": 7,
+      "gender": "men",
+      "sizes": [
+        "xs",
+        "s",
+        "m",
+        "l",
+        "xl",
+        "xxl"
+      ],
+      "clothe_type": "shirts",
+      "tags": [
+        "sweatshirt"
+      ],
+      "images": [
+        "1740176-00-A_0_2000.jpg",
+        "1740176-00-A_1.jpg"
+      ]
+    },
+    {
+      "title": "Men's Quilted Shirt Jacket",
+      "description": "Producto de ejemplo",
+      "slug": "men-quilted-shirt-jacket",
+      "price": 200,
+      "stock": 5,
+      "gender": "men",
+      "sizes": [
+        "xs",
+        "s",
+        "m",
+        "xl",
+        "xxl"
+      ],
+      "clothe_type": "shirts",
+      "tags": [
+        "jacket"
+      ],
+      "images": [
+        "1740507-00-A_0_2000.jpg",
+        "1740507-00-A_1.jpg"
+      ]
+    },
+    {
+      "title": "Men's Raven Lightweight Zip Up Bomber Jacket",
+      "description": "Producto de ejemplo",
+      "slug": "men-raven-lightweight-zip-up-bomber-jacket",
+      "price": 130,
+      "stock": 10,
+      "gender": "men",
+      "sizes": [
+        "s",
+        "m",
+        "l",
+        "xl",
+        "xxl"
+      ],
+      "clothe_type": "shirts",
+      "tags": [
+        "shirt"
+      ],
+      "images": [
+        "1740250-00-A_0_2000.jpg",
+        "1740250-00-A_1.jpg"
+      ]
+    },
+    {
+      "title": "Men's Turbine Long Sleeve Tee",
+      "description": "Producto de ejemplo",
+      "slug": "men-turbine-long-sleeve-tee",
+      "price": 45,
+      "stock": 50,
+      "gender": "men",
+      "sizes": [
+        "xs",
+        "s",
+        "m",
+        "l"
+      ],
+      "clothe_type": "shirts",
+      "tags": [
+        "shirt"
+      ],
+      "images": [
+        "1740280-00-A_0_2000.jpg",
+        "1740280-00-A_1.jpg"
+      ]
+    },
+    {
+      "title": "Men's Turbine Short Sleeve Tee",
+      "description": "Producto de ejemplo",
+      "slug": "men-turbine-short-sleeve-tee",
+      "price": 40,
+      "stock": 50,
+      "gender": "men",
+      "sizes": [
+        "m",
+        "l",
+        "xl",
+        "xxl"
+      ],
+      "clothe_type": "shirts",
+      "tags": [
+        "shirt"
+      ],
+      "images": [
+        "1741416-00-A_0_2000.jpg",
+        "1741416-00-A_1.jpg"
+      ]
+    },
+    {
+      "title": "Men's Cybertruck Owl Tee",
+      "description": "Producto de ejemplo",
+      "slug": "men-cybertruck-owl-tee",
+      "price": 35,
+      "stock": 0,
+      "gender": "men",
+      "sizes": [
+        "m",
+        "l",
+        "xl",
+        "xxl"
+      ],
+      "clothe_type": "shirts",
+      "tags": [
+        "shirt"
+      ],
+      "images": [
+        "7654393-00-A_2_2000.jpg",
+        "7654393-00-A_3.jpg"
+      ]
+    },
+    {
+      "title": "Men's Solar Roof Tee",
+      "description": "Producto de ejemplo",
+      "slug": "men-solar-roof-tee",
+      "price": 35,
+      "stock": 15,
+      "gender": "men",
+      "sizes": [
+        "s",
+        "m",
+        "l",
+        "xl"
+      ],
+      "clothe_type": "shirts",
+      "tags": [
+        "shirt"
+      ],
+      "images": [
+        "1703767-00-A_0_2000.jpg",
+        "1703767-00-A_1.jpg"
+      ]
+    },
+    {
+      "title": "Men's Let the Sun Shine Tee",
+      "description": "Producto de ejemplo",
+      "slug": "men-let-the-sun-shine-tee",
+      "price": 35,
+      "stock": 17,
+      "gender": "men",
+      "sizes": [
+        "xs",
+        "s",
+        "xl",
+        "xxl"
+      ],
+      "clothe_type": "shirts",
+      "tags": [
+        "shirt"
+      ],
+      "images": [
+        "1700280-00-A_0_2000.jpg",
+        "1700280-00-A_1.jpg"
+      ]
+    },
+    {
+      "title": "Men's 3D Large Wordmark Tee",
+      "description": "Producto de ejemplo",
+      "slug": "men-3d-large-wordmark-tee",
+      "price": 35,
+      "stock": 12,
+      "gender": "men",
+      "sizes": [
+        "xs",
+        "s",
+        "m"
+      ],
+      "clothe_type": "shirts",
+      "tags": [
+        "shirt"
+      ],
+      "images": [
+        "8764734-00-A_0_2000.jpg",
+        "8764734-00-A_1.jpg"
+      ]
+    },
+    {
+      "title": "Men's 3D T Logo Tee",
+      "description": "Producto de ejemplo",
+      "slug": "men-3d-t-logo-tee",
+      "price": 35,
+      "stock": 5,
+      "gender": "men",
+      "sizes": [
+        "xs",
+        "s"
+      ],
+      "clothe_type": "shirts",
+      "tags": [
+        "shirt"
+      ],
+      "images": [
+        "7652426-00-A_0_2000.jpg",
+        "7652426-00-A_1.jpg"
+      ]
+    },
+    {
+      "title": "Men’s 3D Small Wordmark Tee",
+      "description": "Producto de ejemplo",
+      "slug": "men-3d-small-wordmark-tee",
+      "price": 35,
+      "stock": 2,
+      "gender": "men",
+      "sizes": [
+        "xs",
+        "s",
+        "m"
+      ],
+      "clothe_type": "shirts",
+      "tags": [
+        "shirt"
+      ],
+      "images": [
+        "8528839-00-A_0_2000.jpg",
+        "8528839-00-A_2.jpg"
+      ]
+    },
+    {
+      "title": "Men's Plaid Mode Tee",
+      "description": "Producto de ejemplo",
+      "slug": "men-plaid-mode-tee",
+      "price": 35,
+      "stock": 82,
+      "gender": "men",
+      "sizes": [
+        "xs",
+        "s",
+        "m",
+        "l",
+        "xl",
+        "xxl"
+      ],
+      "clothe_type": "shirts",
+      "tags": [
+        "shirt"
+      ],
+      "images": [
+        "1549268-00-A_0_2000.jpg",
+        "1549268-00-A_2.jpg"
+      ]
+    },
+    {
+      "title": "Men's Powerwall Tee",
+      "description": "Producto de ejemplo",
+      "slug": "men-powerwall-tee",
+      "price": 35,
+      "stock": 24,
+      "gender": "men",
+      "sizes": [
+        "xl",
+        "xxl"
+      ],
+      "clothe_type": "shirts",
+      "tags": [
+        "shirt"
+      ],
+      "images": [
+        "9877034-00-A_0_2000.jpg",
+        "9877034-00-A_2.jpg"
+      ]
+    },
+    {
+      "title": "Men's Battery Day Tee",
+      "description": "Producto de ejemplo",
+      "slug": "men-battery-day-tee",
+      "price": 30,
+      "stock": 5,
+      "gender": "men",
+      "sizes": [
+        "xs",
+        "s",
+        "xxl"
+      ],
+      "clothe_type": "shirts",
+      "tags": [
+        "shirt"
+      ],
+      "images": [
+        "1633802-00-A_0_2000.jpg",
+        "1633802-00-A_2.jpg"
+      ]
+    },
+    {
+      "title": "Men’s Cybertruck Bulletproof Tee",
+      "description": "Producto de ejemplo",
+      "slug": "men-cybertruck-bulletproof-tee",
+      "price": 30,
+      "stock": 150,
+      "gender": "men",
+      "sizes": [
+        "m",
+        "l"
+      ],
+      "clothe_type": "shirts",
+      "tags": [
+        "shirt"
+      ],
+      "images": [
+        "7654399-00-A_0_2000.jpg",
+        "7654399-00-A_1.jpg"
+      ]
+    },
+    {
+      "title": "Men's Haha Yes Tee",
+      "description": "Producto de ejemplo",
+      "slug": "men-haha-yes-tee",
+      "price": 35,
+      "stock": 10,
+      "gender": "men",
+      "sizes": [
+        "xs",
+        "s",
+        "m",
+        "l",
+        "xl",
+        "xxl"
+      ],
+      "clothe_type": "shirts",
+      "tags": [
+        "shirt"
+      ],
+      "images": [
+        "7652410-00-A_0.jpg",
+        "7652410-00-A_1_2000.jpg"
+      ]
+    },
+    {
+      "title": "Men's S3XY Tee",
+      "description": "Producto de ejemplo",
+      "slug": "men-s3xy-tee",
+      "price": 35,
+      "stock": 34,
+      "gender": "men",
+      "sizes": [
+        "xs",
+        "s",
+        "m",
+        "l"
+      ],
+      "clothe_type": "shirts",
+      "tags": [
+        "shirt"
+      ],
+      "images": [
+        "8764600-00-A_0_2000.jpg",
+        "8764600-00-A_2.jpg"
+      ]
+    },
+    {
+      "title": "Men's 3D Wordmark Long Sleeve Tee",
+      "description": "Producto de ejemplo",
+      "slug": "men-3d-wordmark-long-sleeve-tee",
+      "price": 40,
+      "stock": 15,
+      "gender": "men",
+      "sizes": [
+        "xl",
+        "xxl"
+      ],
+      "clothe_type": "shirts",
+      "tags": [
+        "shirt"
+      ],
+      "images": [
+        "8764813-00-A_0_2000.jpg",
+        "8764813-00-A_1.jpg"
+      ]
+    },
+    {
+      "title": "Men's 3D T Logo Long Sleeve Tee",
+      "description": "Producto de ejemplo",
+      "slug": "men-3d-t-logo-long-sleeve-tee",
+      "price": 40,
+      "stock": 12,
+      "gender": "men",
+      "sizes": [
+        "xs",
+        "xxl"
+      ],
+      "clothe_type": "shirts",
+      "tags": [
+        "shirt"
+      ],
+      "images": [
+        "8529198-00-A_0_2000.jpg",
+        "8529198-00-A_1.jpg"
+      ]
+    },
+    {
+      "title": "Men's Raven Lightweight Hoodie",
+      "description": "Producto de ejemplo",
+      "slug": "men-raven-lightweight-hoodie",
+      "price": 115,
+      "stock": 10,
+      "gender": "men",
+      "sizes": [
+        "xs",
+        "s",
+        "m",
+        "l",
+        "xl",
+        "xxl"
+      ],
+      "clothe_type": "hoodies",
+      "tags": [
+        "hoodie"
+      ],
+      "images": [
+        "1740245-00-A_0_2000.jpg",
+        "1740245-00-A_1.jpg"
+      ]
+    },
+    {
+      "title": "Chill Pullover Hoodie",
+      "description": "Producto de ejemplo",
+      "slug": "chill-pullover-hoodie",
+      "price": 130,
+      "stock": 10,
+      "gender": "unisex",
+      "sizes": [
+        "xs",
+        "s",
+        "m",
+        "l",
+        "xl",
+        "xxl"
+      ],
+      "clothe_type": "hoodies",
+      "tags": [
+        "hoodie"
+      ],
+      "images": [
+        "1740051-00-A_0_2000.jpg",
+        "1740051-00-A_1.jpg"
+      ]
+    },
+    {
+      "title": "Men's Chill Full Zip Hoodie",
+      "description": "Producto de ejemplo",
+      "slug": "men-chill-full-zip-hoodie",
+      "price": 85,
+      "stock": 100,
+      "gender": "men",
+      "sizes": [
+        "xs",
+        "l",
+        "xl",
+        "xxl"
+      ],
+      "clothe_type": "shirts",
+      "tags": [
+        "shirt"
+      ],
+      "images": [
+        "1741111-00-A_0_2000.jpg",
+        "1741111-00-A_1.jpg"
+      ]
+    },
+    {
+      "title": "Men's Chill Quarter Zip Pullover - Gray",
+      "description": "Producto de ejemplo",
+      "slug": "men-chill-quarter-zip-pullover---gray",
+      "price": 85,
+      "stock": 7,
+      "gender": "men",
+      "sizes": [
+        "xs",
+        "s",
+        "m"
+      ],
+      "clothe_type": "shirts",
+      "tags": [
+        "shirt"
+      ],
+      "images": [
+        "1740140-00-A_0_2000.jpg",
+        "1740140-00-A_1.jpg"
+      ]
+    },
+    {
+      "title": "Men's Chill Quarter Zip Pullover - White",
+      "description": "Producto de ejemplo",
+      "slug": "men-chill-quarter-zip-pullover---white",
+      "price": 85,
+      "stock": 15,
+      "gender": "men",
+      "sizes": [
+        "xs",
+        "s",
+        "m",
+        "l"
+      ],
+      "clothe_type": "shirts",
+      "tags": [
+        "shirt"
+      ],
+      "images": [
+        "1740145-00-A_2_2000.jpg",
+        "1740145-00-A_1.jpg"
+      ]
+    },
+    {
+      "title": "3D Large Wordmark Pullover Hoodie",
+      "description": "Producto de ejemplo",
+      "slug": "3d-large-wordmark-pullover-hoodie",
+      "price": 70,
+      "stock": 15,
+      "gender": "unisex",
+      "sizes": [
+        "xs",
+        "s",
+        "xl",
+        "xxl"
+      ],
+      "clothe_type": "hoodies",
+      "tags": [
+        "hoodie"
+      ],
+      "images": [
+        "8529107-00-A_0_2000.jpg",
+        "8529107-00-A_1.jpg"
+      ]
+    },
+    {
+      "title": "Cybertruck Graffiti Hoodie",
+      "description": "Producto de ejemplo",
+      "slug": "cybertruck-graffiti-hoodie",
+      "price": 60,
+      "stock": 13,
+      "gender": "unisex",
+      "sizes": [
+        "xs",
+        "s",
+        "m",
+        "l",
+        "xl",
+        "xxl"
+      ],
+      "clothe_type": "hoodies",
+      "tags": [
+        "hoodie"
+      ],
+      "images": [
+        "7654420-00-A_0_2000.jpg",
+        "7654420-00-A_1_2000.jpg"
+      ]
+    },
+    {
+      "title": "Relaxed T Logo Hat",
+      "description": "Producto de ejemplo",
+      "slug": "relaxed-t-logo-hat",
+      "price": 30,
+      "stock": 11,
+      "gender": "unisex",
+      "sizes": [
+        "xs",
+        "s",
+        "m",
+        "l",
+        "xl",
+        "xxl"
+      ],
+      "clothe_type": "hats",
+      "tags": [
+        "hats"
+      ],
+      "images": [
+        "1657932-00-A_0_2000.jpg",
+        "1657932-00-A_1.jpg"
+      ]
+    },
+    {
+      "title": "Thermal Cuffed Beanie",
+      "description": "Producto de ejemplo",
+      "slug": "thermal-cuffed-beanie",
+      "price": 35,
+      "stock": 13,
+      "gender": "unisex",
+      "sizes": [
+        "xs",
+        "s",
+        "m",
+        "l",
+        "xl",
+        "xxl"
+      ],
+      "clothe_type": "hats",
+      "tags": [
+        "hats"
+      ],
+      "images": [
+        "1740417-00-A_0_2000.jpg",
+        "1740417-00-A_1.jpg"
+      ]
+    },
+    {
+      "title": "Women's Cropped Puffer Jacket",
+      "description": "Producto de ejemplo",
+      "slug": "women-cropped-puffer-jacket",
+      "price": 225,
+      "stock": 85,
+      "gender": "women",
+      "sizes": [
+        "xs",
+        "s",
+        "m"
+      ],
+      "clothe_type": "hoodies",
+      "tags": [
+        "hoodie"
+      ],
+      "images": [
+        "1740535-00-A_0_2000.jpg",
+        "1740535-00-A_1.jpg"
+      ]
+    },
+    {
+      "title": "Women's Chill Half Zip Cropped Hoodie",
+      "description": "Producto de ejemplo",
+      "slug": "women-chill-half-zip-cropped-hoodie",
+      "price": 130,
+      "stock": 10,
+      "gender": "women",
+      "sizes": [
+        "xs",
+        "s",
+        "m",
+        "xxl"
+      ],
+      "clothe_type": "hoodies",
+      "tags": [
+        "hoodie"
+      ],
+      "images": [
+        "1740226-00-A_0_2000.jpg",
+        "1740226-00-A_1.jpg"
+      ]
+    },
+    {
+      "title": "Women's Raven Slouchy Crew Sweatshirt",
+      "description": "Producto de ejemplo",
+      "slug": "women-raven-slouchy-crew-sweatshirt",
+      "price": 110,
+      "stock": 9,
+      "gender": "women",
+      "sizes": [
+        "xs",
+        "s",
+        "m",
+        "l",
+        "xl",
+        "xxl"
+      ],
+      "clothe_type": "hoodies",
+      "tags": [
+        "hoodie"
+      ],
+      "images": [
+        "1740260-00-A_0_2000.jpg",
+        "1740260-00-A_1.jpg"
+      ]
+    },
+    {
+      "title": "Women's Turbine Cropped Long Sleeve Tee",
+      "description": "Producto de ejemplo",
+      "slug": "women-turbine-cropped-long-sleeve-tee",
+      "price": 45,
+      "stock": 10,
+      "gender": "women",
+      "sizes": [
+        "xs",
+        "s",
+        "m",
+        "l",
+        "xl",
+        "xxl"
+      ],
+      "clothe_type": "shirts",
+      "tags": [
+        "shirt"
+      ],
+      "images": [
+        "1740290-00-A_0_2000.jpg",
+        "1740290-00-A_1.jpg"
+      ]
+    },
+    {
+      "title": "Women's Turbine Cropped Short Sleeve Tee",
+      "description": "Producto de ejemplo",
+      "slug": "women-turbine-cropped-short-sleeve-tee",
+      "price": 40,
+      "stock": 0,
+      "gender": "women",
+      "sizes": [
+        "xs",
+        "s"
+      ],
+      "clothe_type": "shirts",
+      "tags": [
+        "shirt"
+      ],
+      "images": [
+        "1741441-00-A_0_2000.jpg",
+        "1741441-00-A_1.jpg"
+      ]
+    },
+    {
+      "title": "Women's T Logo Short Sleeve Scoop Neck Tee",
+      "description": "Producto de ejemplo",
+      "slug": "women-t-logo-short-sleeve-scoop-neck-tee",
+      "price": 35,
+      "stock": 30,
+      "gender": "women",
+      "sizes": [
+        "xs",
+        "s",
+        "m",
+        "l",
+        "xl",
+        "xxl"
+      ],
+      "clothe_type": "shirts",
+      "tags": [
+        "shirt"
+      ],
+      "images": [
+        "8765090-00-A_0_2000.jpg",
+        "8765090-00-A_1.jpg"
+      ]
+    },
+    {
+      "title": "Women's T Logo Long Sleeve Scoop Neck Tee",
+      "description": "Producto de ejemplo",
+      "slug": "women-t-logo-long-sleeve-scoop-neck-tee",
+      "price": 40,
+      "stock": 16,
+      "gender": "women",
+      "sizes": [
+        "xs",
+        "s",
+        "l",
+        "xl",
+        "xxl"
+      ],
+      "clothe_type": "shirts",
+      "tags": [
+        "shirt"
+      ],
+      "images": [
+        "8765100-00-A_0_2000.jpg",
+        "8765100-00-A_1.jpg"
+      ]
+    },
+    {
+      "title": "Women's Small Wordmark Short Sleeve V-Neck Tee",
+      "description": "Producto de ejemplo",
+      "slug": "women-small-wordmark-short-sleeve-v-neck-tee",
+      "price": 35,
+      "stock": 18,
+      "gender": "women",
+      "sizes": [
+        "xs",
+        "s",
+        "m",
+        "l",
+        "xl",
+        "xxl"
+      ],
+      "clothe_type": "shirts",
+      "tags": [
+        "shirt"
+      ],
+      "images": [
+        "8765120-00-A_0_2000.jpg",
+        "8765120-00-A_1.jpg"
+      ]
+    },
+    {
+      "title": "Women's Large Wordmark Short Sleeve Crew Neck Tee",
+      "description": "Producto de ejemplo",
+      "slug": "women-large-wordmark-short-sleeve-crew-neck-tee",
+      "price": 35,
+      "stock": 5,
+      "gender": "women",
+      "sizes": [
+        "xl",
+        "xxl"
+      ],
+      "clothe_type": "shirts",
+      "tags": [
+        "shirt"
+      ],
+      "images": [
+        "8765115-00-A_0_2000.jpg",
+        "8765115-00-A_1.jpg"
+      ]
+    },
+    {
+      "title": "Women's Plaid Mode Tee",
+      "description": "Producto de ejemplo",
+      "slug": "women-plaid-mode-tee",
+      "price": 35,
+      "stock": 16,
+      "gender": "women",
+      "sizes": [
+        "s",
+        "m"
+      ],
+      "clothe_type": "shirts",
+      "tags": [
+        "shirt"
+      ],
+      "images": [
+        "1549275-00-A_0_2000.jpg",
+        "1549275-00-A_1.jpg"
+      ]
+    },
+    {
+      "title": "Women’s Powerwall Tee",
+      "description": "Producto de ejemplo",
+      "slug": "women-powerwall-tee",
+      "price": 130,
+      "stock": 10,
+      "gender": "women",
+      "sizes": [
+        "xs",
+        "s",
+        "m",
+        "l",
+        "xl",
+        "xxl"
+      ],
+      "clothe_type": "shirts",
+      "tags": [
+        "shirt"
+      ],
+      "images": [
+        "9877040-00-A_0_2000.jpg",
+        "9877040-00-A_1.jpg"
+      ]
+    },
+    {
+      "title": "Women's Corp Jacket",
+      "description": "Producto de ejemplo",
+      "slug": "women-corp-jacket",
+      "price": 90,
+      "stock": 3,
+      "gender": "women",
+      "sizes": [
+        "m",
+        "l",
+        "xl",
+        "xxl"
+      ],
+      "clothe_type": "shirts",
+      "tags": [
+        "shirt"
+      ],
+      "images": [
+        "5645680-00-A_0_2000.jpg",
+        "5645680-00-A_3.jpg"
+      ]
+    },
+    {
+      "title": "Women's Raven Joggers",
+      "description": "Producto de ejemplo",
+      "slug": "women-raven-joggers",
+      "price": 100,
+      "stock": 162,
+      "gender": "women",
+      "sizes": [
+        "xs",
+        "s",
+        "m",
+        "l",
+        "xl",
+        "xxl"
+      ],
+      "clothe_type": "shirts",
+      "tags": [
+        "shirt"
+      ],
+      "images": [
+        "1740270-00-A_0_2000.jpg",
+        "1740270-00-A_1.jpg"
+      ]
+    },
+    {
+      "title": "Kids Cybertruck Long Sleeve Tee",
+      "description": "Producto de ejemplo",
+      "slug": "kids-cybertruck-long-sleeve-tee",
+      "price": 30,
+      "stock": 10,
+      "gender": "kid",
+      "sizes": [
+        "xs",
+        "s",
+        "m"
+      ],
+      "clothe_type": "shirts",
+      "tags": [
+        "shirt"
+      ],
+      "images": [
+        "1742694-00-A_1_2000.jpg",
+        "1742694-00-A_3.jpg"
+      ]
+    },
+    {
+      "title": "Kids Scribble T Logo Tee",
+      "description": "Producto de ejemplo",
+      "slug": "kids-scribble-t-logo-tee",
+      "price": 25,
+      "stock": 0,
+      "gender": "kid",
+      "sizes": [
+        "xs",
+        "s",
+        "m"
+      ],
+      "clothe_type": "shirts",
+      "tags": [
+        "shirt"
+      ],
+      "images": [
+        "8529312-00-A_0_2000.jpg",
+        "8529312-00-A_1.jpg"
+      ]
+    },
+    {
+      "title": "Kids Cybertruck Tee",
+      "description": "Producto de ejemplo",
+      "slug": "kids-cybertruck-tee",
+      "price": 25,
+      "stock": 10,
+      "gender": "kid",
+      "sizes": [
+        "xs",
+        "s",
+        "m"
+      ],
+      "clothe_type": "shirts",
+      "tags": [
+        "shirt"
+      ],
+      "images": [
+        "8529342-00-A_0_2000.jpg",
+        "8529342-00-A_1.jpg"
+      ]
+    },
+    {
+      "title": "Kids Racing Stripe Tee",
+      "description": "Producto de ejemplo",
+      "slug": "kids-racing-stripe-tee",
+      "price": 30,
+      "stock": 10,
+      "gender": "kid",
+      "sizes": [
+        "xs",
+        "s",
+        "m"
+      ],
+      "clothe_type": "shirts",
+      "tags": [
+        "shirt"
+      ],
+      "images": [
+        "8529354-00-A_0_2000.jpg",
+        "8529354-00-A_1.jpg"
+      ]
+    },
+    {
+      "title": "Kids 3D T Logo Tee",
+      "description": "Producto de ejemplo",
+      "slug": "kids-3d-t-logo-tee",
+      "price": 30,
+      "stock": 10,
+      "gender": "kid",
+      "sizes": [
+        "xs",
+        "s",
+        "m"
+      ],
+      "clothe_type": "shirts",
+      "tags": [
+        "shirt"
+      ],
+      "images": [
+        "7652465-00-A_0_2000.jpg",
+        "7652465-00-A_1.jpg"
+      ]
+    },
+    {
+      "title": "Kids Checkered Tee",
+      "description": "Producto de ejemplo",
+      "slug": "kids-checkered-tee",
+      "price": 30,
+      "stock": 10,
+      "gender": "kid",
+      "sizes": [
+        "xs",
+        "s",
+        "m"
+      ],
+      "clothe_type": "shirts",
+      "tags": [
+        "shirt"
+      ],
+      "images": [
+        "100042307_0_2000.jpg",
+        "100042307_alt_2000.jpg"
+      ]
+    },
+    {
+      "title": "Made on Earth by Humans Onesie",
+      "description": "Producto de ejemplo",
+      "slug": "made-on-earth-by-humans-onesie",
+      "price": 25,
+      "stock": 16,
+      "gender": "kid",
+      "sizes": [
+        "xs",
+        "s"
+      ],
+      "clothe_type": "shirts",
+      "tags": [
+        "shirt"
+      ],
+      "images": [
+        "1473809-00-A_1_2000.jpg",
+        "1473809-00-A_alt.jpg"
+      ]
+    },
+    {
+      "title": "Scribble T Logo Onesie",
+      "description": "Producto de ejemplo",
+      "slug": "scribble-t-logo-onesie",
+      "price": 30,
+      "stock": 0,
+      "gender": "kid",
+      "sizes": [
+        "xs",
+        "s"
+      ],
+      "clothe_type": "shirts",
+      "tags": [
+        "shirt"
+      ],
+      "images": [
+        "8529387-00-A_0_2000.jpg",
+        "8529387-00-A_1.jpg"
+      ]
+    },
+    {
+      "title": "Zero Emissions (Almost) Onesie",
+      "description": "Producto de ejemplo",
+      "slug": "zero-emissions-almost-onesie",
+      "price": 30,
+      "stock": 10,
+      "gender": "kid",
+      "sizes": [
+        "xs",
+        "s"
+      ],
+      "clothe_type": "shirts",
+      "tags": [
+        "shirt"
+      ],
+      "images": [
+        "1473834-00-A_2_2000.jpg",
+        "1473829-00-A_2_2000.jpg"
+      ]
+    },
+    {
+      "title": "Kids Cyberquad Bomber Jacket",
+      "description": "Producto de ejemplo",
+      "slug": "kids-cyberquad-bomber-jacket",
+      "price": 65,
+      "stock": 10,
+      "gender": "kid",
+      "sizes": [
+        "xs",
+        "s",
+        "m"
+      ],
+      "clothe_type": "shirts",
+      "tags": [
+        "shirt"
+      ],
+      "images": [
+        "1742702-00-A_0_2000.jpg",
+        "1742702-00-A_1.jpg"
+      ]
+    },
+    {
+      "title": "Kids Corp Jacket",
+      "description": "Producto de ejemplo",
+      "slug": "kids-corp-jacket",
+      "price": 30,
+      "stock": 10,
+      "gender": "kid",
+      "sizes": [
+        "xs",
+        "s",
+        "m"
+      ],
+      "clothe_type": "shirts",
+      "tags": [
+        "shirt"
+      ],
+      "images": [
+        "1506211-00-A_0_2000.jpg",
+        "1506211-00-A_1_2000.jpg"
+      ]
+    }
+  ]
+}

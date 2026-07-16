@@ -14,5 +14,9 @@
 ### En caso de querer correr la app en Docker
 1. Ejecutar `docker compose up`
 2. Ejecutar `docker compose build`
+3. Ejecutar el siguiente comando dentro de la instancia web de Django dentro de <span style="color:blue">Docker</span>
+```
+ptyhon manage.py import_products
+```
 
-Estos pasos levantarán la BD y la el servidor web de Django
+Estos pasos levantarán la y llenarán BD de información y a su vez lenvantará el servidor web de Django dentro de <span style="color:blue">Docker</span>

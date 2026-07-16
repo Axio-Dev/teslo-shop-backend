@@ -49,7 +49,7 @@ class Product(models.Model):
     tags = ArrayField(models.CharField(max_length=50), default=list, blank=True)
 
     created_by = models.ForeignKey(
-        User, on_delete=models.CASCADE, related_name="products"
+        User, on_delete=models.CASCADE, related_name="products", null=True, blank=True
     )
 
     created_at = models.DateTimeField(auto_now_add=True)
