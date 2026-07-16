@@ -24,6 +24,13 @@ class Product(models.Model):
         XL = "xl", "XL"
         XXL = "xxl", "XXL"
 
+    class ClotheType(models.TextChoices):
+        NO_TYPE = "no type", "No type"
+        SHIRTS = "shirts", "Shirts"
+        PANTS = "pants", "Pants"
+        HOODIES = "hoodies", "Hodies"
+        HATS = "hats", "Hats"
+
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
 
     title = models.CharField(max_length=255)
@@ -35,6 +42,9 @@ class Product(models.Model):
     gender = models.CharField(max_length=20, choices=Gender.choices)
     sizes = ArrayField(
         models.CharField(max_length=5, choices=Sizes.choices), default=list, blank=True
+    )
+    clothe_type = models.CharField(
+        max_length=10, choices=ClotheType.choices, default=ClotheType.NO_TYPE
     )
     tags = ArrayField(models.CharField(max_length=50), default=list, blank=True)
 
