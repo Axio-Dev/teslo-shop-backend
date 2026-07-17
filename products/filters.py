@@ -16,4 +16,4 @@ class ProductFilter(django_filters.FilterSet):
         return queryset.filter(sizes__contains=sizes)
 
     def filter_gender(self, queryset, name, value):
-        return queryset.filter(gender__icontains=value)
+        return queryset.filter(gender__iexact=value)
