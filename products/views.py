@@ -8,11 +8,13 @@ from rest_framework.permissions import (
 from .models import Product, ProductImage
 from .serializers import ProductSerializer, ProductImageSerializer
 from users.permissions import IsAdminUser
+from .pagination import ProductPagination
 
 
 class ProductViewSet(ModelViewSet):
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
+    pagination_class = ProductPagination
     lookup_field = "slug"
 
     def get_permissions(self):
