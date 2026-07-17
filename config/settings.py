@@ -49,14 +49,14 @@ DJANGO_APPS = [
     "django_extensions",
 ]
 
-THIRD_PARTY_APPS = ["rest_framework", "corsheaders"]
-
 LOCAL_APPS = [
     "products",
     "users",
 ]
 
-INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
+THIRD_PARTY_APPS = ["rest_framework", "corsheaders", "django_filters"]
+
+INSTALLED_APPS = DJANGO_APPS + LOCAL_APPS + THIRD_PARTY_APPS
 
 MIDDLEWARE = [
     "corsheaders.middleware.CorsMiddleware",
