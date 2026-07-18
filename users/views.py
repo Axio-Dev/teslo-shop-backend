@@ -1,4 +1,4 @@
-from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth import authenticate, logout
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
@@ -36,8 +36,6 @@ class LoginAPIView(APIView):
             )
 
         tokens = get_tokens_for_user(user)
-
-        login(request, user)
 
         return Response(
             {
@@ -95,10 +93,17 @@ class CheckUserStatusAPIView(APIView):
     permission_classes = [IsAuthenticated]
 
     def get(self, request):
+        tokens = get_tokens_for_user(request.user)
 
         return Response(
             {
-                "is_active": request.user.is_active,
-                "role": request.user.role,
+                "user": {
+                    "id": request.user.id,
+                    "email": request.user.email,
+                    "first_name": request.user.first_name,
+                    "last_name": request.user.last_name,
+                    "role": request.user.role,
+                },
+                "token": tokens["access"],
             }
         )
