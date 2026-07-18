@@ -6,6 +6,7 @@ from rest_framework.permissions import (
 )
 
 from django_filters.rest_framework import DjangoFilterBackend
+from rest_framework.filters import SearchFilter
 
 from .models import Product, ProductImage
 from .serializers import ProductSerializer, ProductImageSerializer
@@ -17,9 +18,14 @@ from .filters import ProductFilter
 class ProductViewSet(ModelViewSet):
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
+
     pagination_class = ProductPagination
-    filter_backends = [DjangoFilterBackend]
+
+    filter_backends = [DjangoFilterBackend, SearchFilter]
     filterset_class = ProductFilter
+
+    search_fields = ["title", "description", "slug", "tags"]
+
     lookup_field = "slug"
 
     def get_permissions(self):

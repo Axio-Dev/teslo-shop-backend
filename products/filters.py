@@ -23,5 +23,5 @@ class ProductFilter(django_filters.FilterSet):
     def min_filter_price(self, queryset, name, value):
         return queryset.filter(price__gte=value)
 
-    def max_filter_price(sel, queryset, name, value):
+    def max_filter_price(self, queryset, name, value):
         return queryset.filter(price__lte=value)
