@@ -6,6 +6,8 @@ from .models import Product
 class ProductFilter(django_filters.FilterSet):
     sizes = django_filters.CharFilter(method="filter_sizes")
     gender = django_filters.CharFilter(method="filter_gender")
+    min_price = django_filters.NumberFilter(method="min_filter_price")
+    max_price = django_filters.NumberFilter(method="max_filter_price")
 
     class Meta:
         model = Product
@@ -17,3 +19,9 @@ class ProductFilter(django_filters.FilterSet):
 
     def filter_gender(self, queryset, name, value):
         return queryset.filter(gender__iexact=value)
+
+    def min_filter_price(self, queryset, name, value):
+        return queryset.filter(price__gte=value)
+
+    def max_filter_price(sel, queryset, name, value):
+        return queryset.filter(price__lte=value)
