@@ -20,7 +20,7 @@ class ProductImageSerializer(serializers.ModelSerializer):
 
 class ProductSerializer(serializers.ModelSerializer):
     images = ProductImageSerializer(many=True, read_only=True)
-    created_by = UserSerializer(read_only=True)
+    user = UserSerializer(source="created_by", read_only=True)
 
     class Meta:
         model = Product
@@ -38,7 +38,7 @@ class ProductSerializer(serializers.ModelSerializer):
             "tags",
             "created_at",
             "updated_at",
-            "created_by",
+            "user",
         )
         read_only_fields = (
             "slug",

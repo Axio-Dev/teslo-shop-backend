@@ -19,7 +19,7 @@ def get_tokens_for_user(user):
     access["role"] = user.role
     access["email"] = user.email
 
-    return {"refresh": str(refresh), "access": str(access)}
+    return {"token": str(access)}
 
 
 class LoginAPIView(APIView):
@@ -32,7 +32,8 @@ class LoginAPIView(APIView):
 
         if user is None:
             return Response(
-                {"error": "Invalid credentials"}, status=status.HTTP_401_UNAUTHORIZED
+                {"error": "Invalid credentials, check your email or password"},
+                status=status.HTTP_401_UNAUTHORIZED,
             )
 
         tokens = get_tokens_for_user(user)
@@ -45,6 +46,7 @@ class LoginAPIView(APIView):
                     "first_name": user.first_name,
                     "last_name": user.last_name,
                     "role": user.role,
+                    "is_active": user.is_active,
                 },
                 **tokens,
             },
@@ -80,6 +82,7 @@ class RegisterAPIView(APIView):
                         "first_name": user.first_name,
                         "last_name": user.last_name,
                         "role": user.role,
+                        "is_active": user.is_active,
                     },
                     **tokens,
                 },
@@ -104,6 +107,6 @@ class CheckUserStatusAPIView(APIView):
                     "last_name": request.user.last_name,
                     "role": request.user.role,
                 },
-                "token": tokens["access"],
+                "token": tokens["token"],
             }
         )
