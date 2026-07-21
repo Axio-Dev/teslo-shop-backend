@@ -26,7 +26,7 @@ class ProductViewSet(ModelViewSet):
 
     search_fields = ["title", "description", "slug", "tags"]
 
-    lookup_field = "slug"
+    lookup_field = "id"
 
     def get_permissions(self):
         if self.request.method in SAFE_METHODS:
